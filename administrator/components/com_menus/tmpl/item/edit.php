@@ -179,7 +179,7 @@ if ($clientId === 1)
 					}
 
 					echo LayoutHelper::render('joomla.edit.global', $this);
-					
+
 					?>
 				</section>
 				

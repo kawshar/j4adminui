@@ -45,7 +45,7 @@ class MenutypeField extends ListField
 	protected function getInput()
 	{
 		HTMLHelper::_('webcomponent', 'system/joomla-dropdown.min.js', array('version' => 'auto', 'relative' => true));
-		HTMLHelper::_('script', 'com_menus/admin-item-modal.js', ['version' => 'auto', 'relative' => true]);
+		HTMLHelper::_('script', 'com_menus/admin-item-edit.js', ['version' => 'auto', 'relative' => true]);
 
 		$html     = array();
 		$recordId = (int) $this->form->getValue('id');
@@ -143,6 +143,7 @@ class MenutypeField extends ListField
 
 		$html[] = '<input type="hidden" ' . $required . ' readonly="readonly" id="' . $this->id
 			. '" value="' . $value . '"' . $size . $class . '>';
+
 		$html[] = '<input type="hidden" name="' . $this->name . '" value="'
 			. htmlspecialchars($this->value, ENT_COMPAT, 'UTF-8') . '" id="' . $this->id . '_val">';
 
